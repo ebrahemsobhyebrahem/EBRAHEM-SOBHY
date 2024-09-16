@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- تحديد مجموعة الأحرف المستخدمة في الصفحة -->
+    <meta charset="UTF-8">
+
+    <!-- ضبط العرض لمطابقة حجم الجهاز وتغيير حجم العرض بناءً على تكبير الصفحة -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- وصف الموقع لتقديم فكرة واضحة عنه لمحركات البحث ووسائل التواصل الاجتماعي -->
+    <meta name="description" content="Explore Ebrahem Sobhy's portfolio showcasing expertise in web development, innovative projects, and professional design skills.">
+
+    <!-- كلمات دلالية لتحسين البحث عن الموقع -->
+
+
+<meta name="keywords" content="Ebrahem Sobhy, web developer, portfolio, personal website">
+
+    <!-- تحديد مؤلف الموقع لتحسين التخصيص -->
+    <meta name="author" content="Ebrahem Sobhy">
+
+    <!-- ضمان التوافق مع متصفحات الويب القديمة -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- عنوان الصفحة الذي يظهر في شريط العنوان للمتصفح -->
+
+
+<title>Ebrahem Sobhy | Portfolio</title>
+
+    <!-- Open Graph Meta Tags لتحسين عرض الرابط عند المشاركة على وسائل التواصل الاجتماعي -->
+    <meta property="og:title" content="Ebrahem Sobhy | Portfolio">
+    <meta property="og:description" content="Explore Ebrahem Sobhy's portfolio showcasing expertise in web development, innovative projects, and professional design skills.">
+    <meta property="og:image" content="mybloglogo.webp">
+    <meta property="og:url" content="https://seebrahemsobhy.github.io/EBRAHEM-SOBHY">
+    <meta property="og:type" content="website">
+    <meta property="og:image:alt" content="A professional image representing Ebrahem Sobhy's portfolio">
+
+    <!-- Twitter Card Meta Tags لتحسين عرض الرابط عند المشاركة على تويتر -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ebrahem Sobhy | Portfolio">
+    <meta name="twitter:description" content="Explore Ebrahem Sobhy's portfolio showcasing expertise in web development, innovative projects, and professional design skills.">
+    <meta name="twitter:image" content="mybloglogo.webp">
+
+    <!-- Favicon لتحسين تجربة المستخدم وإظهار أيقونة الموقع في شريط العنوان للمتصفح -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- تحسين أداء تحميل الخطوط والخدمات الخارجية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <!-- Font Awesome for social icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #333;
+/* الأساسيات لجميع الشاشات */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* قائمة التنقل - تظهر بشكل أفقي على الشاشات الكبيرة والمتوسطة */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* عرض القوائم بشكل أفقي */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: bottom right;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* تصميم الشاشات الكبيرة (769 بكسل وأكثر) - التابلت، اللابتوب، والكمبيوتر */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* إخفاء رمز البرغر على الشاشات الكبيرة */
+    }
+
+    nav ul {
+        display: flex; /* عرض القائمة بشكل أفقي على الشاشات الكبيرة */
+    }
+
+    nav ul li {
+        margin-left: 20px; /* تباعد بين العناصر */
+    }
+}/* تصميم شاشات الهواتف (768 بكسل وأقل) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* عرض رمز البرغر على الشاشات الصغيرة */
+        flex-direction: column;
+        cursor: pointer;
+        align-self: center; /* محاذاة الأيقونة إلى المنتصف */
+        z-index: 1001; /* التأكد من أن الأيقونة تكون فوق القائمة */
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        margin: 4px 0;
+        transition: 0.3s;
+    }
+
+    nav ul {
+        display: none; /* إخفاء القائمة بشكل افتراضي على الشاشات الصغيرة */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px 0; /* إضافة بعض التباعد حول القائمة */
+        align-items: center; /* محاذاة العناصر في المنتصف */
+        position: absolute;
+        top: 70px; /* ضبط المسافة من أعلى القائمة حسب حاجتك */
+        left: 0;
+        right: 0;
+        z-index: 1000; /* التأكد من أن القائمة تكون فوق باقي العناصر */
+        transition: max-height 0.3s ease-out; /* تأثير الانتقال لتسهيل عرض القائمة */
+        max-height: 0; /* بدء الحالة بتخفيف الارتفاع إلى صفر */
+        overflow: hidden; /* إخفاء المحتوى الذي يتجاوز الحد */
+    }
+
+    nav ul.active {
+        display: flex; /* عرض القائمة عند النقر على رمز البرغر */
+        max-height: 500px; /* تعيين حد أقصى للارتفاع عند العرض */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 15px; /* زيادة التباعد بين العناصر */
+    }
+
+    nav ul li a {
+        font-size: 20px; /* زيادة حجم الخط قليلاً لسهولة القراءة */
+        padding: 12px 20px; /* توسيع المنطقة القابلة للنقر */
+        text-align: center; /* توسيط النص */
+    }
+}/* إعدادات السهم */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* مخفي افتراضياً */
+    width: 60px; /* تقليص حجم الدائرة */
+    height: 60px; /* تقليص حجم الدائرة */
+    background-color: #000; /* الخلفية سوداء */
+    color: #fff; /* لون السهم أبيض */
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px; /* تكبير حجم السهم ليبدو فخمًا */
+    border-radius: 50%; /* تصميم دائري */
+    z-index: 100;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* إضافة ظل خفيف للدائرة */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* تأثير التحويم */
+.back-to-top:hover {
+    transform: scale(1.1); /* تكبير عند التحويم */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); /* ظل أكثر قوة عند التحويم */
+}
+
+/* أيقونة السهم داخل الدائرة */
+.back-to-top i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* تصميم مخصص للشاشات الصغيرة */
+@media (max-width: 600px) {
+    .back-to-top {
+        width: 50px; /* تقليص حجم الدائرة أكثر */
+        height: 50px;
+        font-size: 24px; /* تقليص حجم السهم */
+        bottom: 15px; /* تقليل المسافة من الأسفل */
+        right: 15px; /* تقليل المسافة من اليمين */
+        line-height: 50px; /* تعديل المسافة العمودية لتناسب الحجم الجديد */
+    }
+}
+
+/* تصميم مخصص للشاشات الكبيرة */
+@media (min-width: 1200px) {
+    .back-to-top {
+        width: 70px; /* تكبير الدائرة للشاشات الأكبر */
+        height: 70px;
+        font-size: 30px; /* تكبير السهم */
+        bottom: 30px; /* زيادة المسافة من الأسفل */
+        right: 30px; /* زيادة المسافة من اليمين */
+        line-height: 70px;
+    }
+}
+/* التصميم الأساسي لقسم الصفحة الرئيسية */
+#home {
+    height: 100vh; /* يغطي كامل ارتفاع الشاشة */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                      url('https://seebrahemsobhy.github.io/EBRAHEM-SOBHY/welcome.jpg'); /* إضافة لون غامق أعلى الصورة */
+    background-size: cover; /* تغطية كاملة للصورة */
+    background-position: center; /* تمركز الصورة في المنتصف */
+    background-blend-mode: darken; /* دمج اللون مع الصورة بطريقة تجعلها تميل إلى الأسود */
+    display: flex; /* استخدام Flexbox لسهولة تنظيم المحتوى */
+    flex-direction: column; /* تنظيم المحتوى في عمود */
+    justify-content: center; /* تمركز المحتوى عموديًا */
+    align-items: center; /* تمركز المحتوى أفقيًا */
+    text-align: center; /* توسيط النص */
+    padding: 0 20px; /* إضافة مسافة حول المحتوى من الجوانب */
+}
+
+/* تنسيق العنوان الرئيسي */
+#home h1 {
+    font-size: 70px;
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* تنسيق العنوان الثانوي */
+#home h2 {
+    font-size: 50px;
+    margin: 20px 0;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* تنسيق النص المتحرك */
+.typing {
+    color: #fff; /* تغيير لون النص إلى الأبيض */
+    font-weight: bold;
+    font-size: 55px; /* ضبط حجم الخط */
+}
+
+/* تصميم الشاشات الصغيرة (768 بكسل وأقل) */
+@media (max-width: 768px) {
+    #home {
+        background-position: 80% center; /* تحريك الصورة قليلاً إلى اليسار */
+    }
+
+    #home h1 {
+        font-size: 40px; /* تقليل حجم العنوان الرئيسي */
+    }
+
+    #home h2 {
+        font-size: 30px; /* تقليل حجم العنوان الثانوي */
+    }
+
+    .typing {
+        font-size: 40px; /* تقليل حجم النص المتحرك */
+    }
+}
+
+        .social-icons {
+    display: flex; /* يجعل الأيقونات تظهر بجانب بعضها البعض */
+    justify-content: center; /* يركز الأيقونات في المنتصف */
+    padding: 10px; /* يضيف بعض المساحة حول الأيقونات */
+}
+
+.social-icons a {
+    color: #fff; /* يحدد لون الأيقونات */
+    font-size: 24px; /* يحدد حجم الأيقونات */
+    margin: 0 10px; /* يضيف مساحة بين الأيقونات */
+    text-decoration: none; /* يزيل التسطير من الأيقونات */
+    transition: transform 0.3s ease; /* يضيف تأثير الانتقال للتكبير */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* يكبر الأيقونات عند التمرير */
+}
+/* الأساسيات لقسم About */
+#about {
+    padding: 80px 20px;
+    background-color: #fff; /* خلفية بيضاء للقسم */
+    color: #333; /* لون النص الداكن */
+}
+
+#about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+#about .profile img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #333; /* لون الحدود الداكنة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ظل خفيف للصورة */
+    object-fit: cover; /* ملء الصورة في الحاوية */
+}
+
+/* تحسين نص المعلومات */
+#about .info {
+    flex: 1;
+}
+
+#about .info h1 {
+    font-size: 36px; /* حجم الخط الكبير للعناوين */
+    margin-bottom: 10px;
+    color: #222; /* لون النص أغمق */
+}
+
+#about .info h2 {
+    font-size: 24px; /* حجم الخط للعناوين الثانوية */
+    margin-bottom: 20px;
+    color: #444; /* لون النص الداكن */
+}
+
+#about .info p {
+    font-size: 18px; /* حجم الخط للنصوص */
+    line-height: 1.6; /* ارتفاع السطر لسهولة القراءة */
+    margin-bottom: 20px;
+}
+
+/* تصميم الأزرار */
+.button {
+    padding: 12px 24px; /* زيادة padding */
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px; /* زوايا أكثر استدارة */
+    display: inline-block;
+    margin-right: 10px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.button.white {
+    background-color: #fff; /* خلفية بيضاء */
+    color: #333; /* لون النص الداكن */
+    border: 2px solid #333; /* لون الحدود الداكن */
+}
+
+.button.contact-me {
+    background-color: #333; /* لون خلفية الزر الأساسي */
+    color: #fff; /* لون النص الأبيض */
+    border: 2px solid transparent; /* شفافية الحدود */
+}
+
+.button.contact-me:hover {
+    background-color: #555; /* لون الخلفية عند التمرير */
+    color: #fff; /* لون النص عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* ظل أكبر عند التمرير */
+}
+
+/* تحسين النص المميز */
+.royal-blue-text {
+    font-size: 24px; /* حجم الخط */
+    font-weight: bold; /* سمك الخط */
+    background: linear-gradient(45deg, #0033cc, #00bfff); /* تدرج ألوان */
+    -webkit-background-clip: text; /* تطبيق التدرج على النص */
+    -webkit-text-fill-color: transparent; /* جعل النص شفافًا */
+}
+
+/* تصميم الشاشات الصغيرة (أقل من 768 بكسل) */
+@media (max-width: 768px) {
+    #about .container {
+        flex-direction: column; /* تنظيم العناصر بشكل عمودي */
+        text-align: center; /* محاذاة النص في المنتصف */
+    }
+
+    #about .profile img {
+        width: 200px; /* تقليل حجم الصورة */
+        height: 200px;
+    }
+
+    #about .info h1 {
+        font-size: 28px; /* تقليل حجم الخط للعناوين */
+    }
+
+    #about .info h2 {
+        font-size: 20px; /* تقليل حجم الخط للعناوين الثانوية */
+    }
+
+    #about .info p {
+        font-size: 16px; /* تقليل حجم الخط للنصوص */
+    }
+}
+
+        /* التصميم الأساسي لقسم المهارات */
+#skills {
+    padding: 80px 20px;
+    background-color: #fafafa; /* خلفية فاتحة جدًا */
+    color: #333; /* نص داكن ليتباين مع الخلفية */
+    text-align: center;
+}
+
+#skills h1 {
+    font-size: 36px; /* حجم العنوان */
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif; /* خط حديث */
+    color: #444; /* لون العنوان داكن */
+    font-weight: 600; /* وزن الخط متوسط */
+    letter-spacing: 1px; /* تباعد بين الأحرف */
+}
+
+.skill-bar {
+    background-color: #fff; /* خلفية بيضاء لشريط المهارة */
+    border-radius: 25px; /* زوايا مستديرة كبيرة */
+    padding: 15px 20px; /* تباعد داخلي */
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* تأثيرات التمرير */
+}
+
+.skill-bar:hover {
+    transform: translateY(-5px); /* رفع الشريط قليلاً عند التمرير */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* ظل أكثر وضوحًا عند التمرير */
+}
+
+.skill-bar span {
+    display: block;
+    font-size: 18px; /* حجم النص */
+    font-weight: 500; /* وزن الخط متوسط */
+    margin-bottom: 8px;
+    color: #555; /* النص رمادي داكن */
+}
+
+.skill-bar .progress {
+    background-color: #e0e0e0; /* لون خلفية شريط التقدم */
+    border-radius: 25px; /* زوايا مستديرة للشريط */
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar .progress-bar {
+    height: 100%;
+    background-color: #000; /* الشريط نفسه باللون الأسود */
+    width: 0; /* عرض الشريط يبدأ من 0 ويتغير */
+    transition: width 0.6s ease; /* تحسين انتقال عرض الشريط */
+    border-radius: 25px; /* زوايا مستديرة للشريط */
+}
+
+.skill-bar .progress-bar span {
+    position: absolute;
+    right: 15px; /* وضع النسبة المئوية على اليمين */
+    color: #fff; /* النص داخل الشريط أبيض */
+    font-weight: bold;
+    font-size: 14px; /* حجم النص داخل الشريط */
+}
+
+/* تصميم شاشات الهواتف (768 بكسل وأقل) */
+@media (max-width: 768px) {
+    #skills {
+        padding: 40px 10px; /* تقليل التباعد الداخلي */
+    }
+
+    #skills h1 {
+        font-size: 28px; /* تقليل حجم العنوان */
+        margin-bottom: 30px; /* تقليل المسافة السفلية */
+    }
+
+    .skill-bar {
+        width: 90%; /* زيادة عرض الشريط ليتناسب مع الشاشة الصغيرة */
+        padding: 10px 15px; /* تقليل التباعد الداخلي */
+    }
+
+    .skill-bar span {
+        font-size: 16px; /* تقليل حجم النص */
+    }
+
+    .skill-bar .progress {
+        height: 18px; /* تقليل ارتفاع شريط التقدم */
+    }
+
+    .skill-bar .progress-bar {
+        border-radius: 15px; /* زوايا مستديرة أصغر */
+    }
+
+    .skill-bar .progress-bar span {
+        font-size: 12px; /* تقليل حجم النص داخل الشريط */
+        right: 10px; /* ضبط موقع النص */
+    }
+}
+
+
+        #services {
+    padding: 100px 20px;
+    background-color: #f9f9f9; /* لون خلفية فاتح */
+    color: #333;
+    text-align: center;
+}
+
+#services h1 {
+    font-size: 42px; /* زيادة حجم العنوان */
+    margin-bottom: 60px;
+    font-family: 'Poppins', sans-serif; /* خط حديث */
+    color: #111; /* لون داكن */
+    text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+    letter-spacing: 1px; /* زيادة المسافة بين الحروف */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* تفعيل التفاف العناصر في الحاوية */
+    gap: 20px; /* المسافة بين صناديق الخدمات */
+}
+
+.service-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px; /* زوايا مستديرة */
+    padding: 30px;
+    margin: 10px;
+    display: flex; /* استخدام flex لتوزيع المحتوى */
+    flex-direction: column;
+    align-items: center; /* توسيط المحتوى */
+    width: 300px;
+    text-align: center; /* توسيط النص */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* ظل أعمق */
+    transition: transform 0.3s ease; /* تأثير الحركة */
+}
+
+.service-box:hover {
+    transform: translateY(-5px); /* رفع الصندوق عند التمرير */
+}
+
+.service-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 16px; /* تقليل حجم النص */
+    color: #666;
+    line-height: 1.5; /* زيادة المسافة بين الأسطر */
+}
+
+.service-box i {
+    font-size: 50px; /* زيادة حجم الأيقونة */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* التصميم العام */
+#contact {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.contact-detail {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-detail a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-detail i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.contact-detail:hover i {
+    transform: scale(1.2);
+}
+
+.contact-detail h3 {
+    margin-bottom: 10px;
+}
+
+.contact-detail p {
+    margin: 0;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.input-large {
+    padding: 15px; /* زيادة الحشو لراحة الكتابة */
+    font-size: 18px; /* حجم الخط المتناسق */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%; /* العرض الكامل */
+    box-sizing: border-box; /* تأكيد الحجم الصحيح مع الحشو والحدود */
+}
+
+.contact-form textarea {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 100px; /* ارتفاع ثابت */
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+/* تصميم مخصص للشاشات الصغيرة */
+@media (max-width: 600px) {
+    #contact {
+        padding: 40px 10px;
+    }
+
+    #contact h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-detail i {
+        font-size: 30px;
+    }
+
+    .contact-form form {
+        width: 100%;
+        gap: 10px; /* مسافة قصيرة جدًا بين الحقول */
+    }
+
+    /* إضافة تخصيص لحقل الاسم وحقل البريد الإلكتروني فقط */
+    .contact-form .input-large:nth-child(1),
+    .contact-form .input-large:nth-child(2) {
+        margin-bottom: 5px; /* مسافة قصيرة بين حقل الاسم وحقل البريد الإلكتروني */
+    }
+
+    .input-large {
+        font-size: 15px;
+    }
+
+    .contact-form textarea {
+        height: 90px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+        align-self: center;
+    }
+}
+
+
+/* تصميم مخصص للشاشات الكبيرة (مثل الكمبيوتر والتابلت) */
+@media (min-width: 768px) {
+    #contact {
+        padding: 60px 20px;
+    }
+
+    #contact h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .input-large {
+        width: calc(50% - 10px); /* عرض مناسب للحقول */
+    }
+
+    .contact-form textarea {
+        height: 100px;
+    }
+
+    .contact-form button {
+        font-size: 18px;
+        padding: 10px 20px;
+        align-self: flex-start;
+    }
+}
+
+/* تصميم مخصص للشاشات الكبيرة جداً (مثل اللابتوب) */
+@media (min-width: 1200px) {
+    #contact {
+        padding: 80px 40px;
+    }
+
+    #contact h1 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .contact-form form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .input-large {
+        width: calc(50% - 10px); /* عرض مناسب للحقول */
+        font-size: 18px;
+    }
+
+    .contact-form textarea {
+        font-size: 20px;
+        height: 120px;
+    }
+
+    .contact-form button {
+        font-size: 18px;
+        padding: 10px 20px;
+        align-self: flex-start;
+    }
+}
+
+        footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-size: 14px; /* حجم الخط الأساسي */
+    font-family: Arial, sans-serif; /* نوع الخط */
+}
+
+/* تصميم مخصص للشاشات الصغيرة */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px; /* تقليل الحشو قليلاً على الشاشات الصغيرة */
+        font-size: 12px; /* تصغير حجم الخط لجعل النص مناسباً */
+    }
+}
+
+/* تصميم مخصص للشاشات الكبيرة */
+@media (min-width: 768px) {
+    footer {
+        padding: 30px; /* زيادة الحشو على الشاشات الكبيرة */
+        font-size: 16px; /* تكبير حجم الخط لجعله أكثر وضوحًا */
+    }
+}
+
+    </style>
+<body>
+    <nav>
+        <div class="container">
+            <div class="name">EBRAHEM</div>
+            <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1>Hello</h1>
+        <h2>I Am <span class="typing"></span></h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/ipBmpRx8n7BcxkjU/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/SeEbrahemsobhy?t=aSR-AWtje-9G4yLV65mvmQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/ebrahim-sobhy-964720322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/ebrahemsobhy221/profilecard/?igsh=dXEyMmlmanc4dm41" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/SeEbrahemSobhy" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+<!-- سهم العودة إلى أعلى -->
+<a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i> <!-- أيقونة السهم من Font Awesome -->
+</a>
+
+    <section id="about">
+        <div class="container">
+            <div class="profile">
+                <img src="https://pbs.twimg.com/profile_images/1827450688831426561/6y2UBbTn.jpg" alt="Ebrahem Sobhy">
+            </div>
+            <div class="info">
+                <h1>About Me</h1>
+                <h2>Student and Website Developer</h2>
+                <p>I am <span class="royal-blue-text">Ibrahim Sobhi</span>, a third-year secondary school student and website developer. I love designing and developing websites that are easy to use and visually attractive, and I always strive to improve my skills by working on innovative projects.</p>
+                <a href="mailto:seebrahemsobhy@gmail.com" class="button contact-me">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="skills">
+    <h1>My Skills</h1>
+
+    <div class="skill-bar">
+        <span>HTML</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: 70%;">
+                <span>70%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <span>CSS</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: 70%;">
+                <span>70%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="skill-bar">
+        <span>JavaScript</span>
+        <div class="progress">
+            <div class="progress-bar" style="width: 65%;">
+                <span>65%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <section id="services">
+        <h1>Services</h1>
+        <div class="container">
+            <div class="service-box">
+                <i class="bi bi-code-slash"></i>
+                <h3>WEB DEVELOPMENT</h3>
+                <p>Transform your ideas into reality with custom-built websites that are not only functional but also visually appealing. My web development services cover everything from front-end to back-end development.</p>
+            </div>
+            <div class="service-box">
+                <i class="bi bi-paint-bucket"></i>
+                <h3>DESIGN & UX</h3>
+                <p>Create engaging user experiences and stunning designs that captivate your audience. I focus on user-centered design principles to ensure your website or application is both usable and beautiful.</p>
+            </div>
+            <div class="service-box">
+                <i class="bi bi-gear"></i>
+                <h3>MAINTENANCE & SUPPORT</h3>
+                <p>Keep your website running smoothly with ongoing maintenance and support. I offer reliable services to troubleshoot issues, update content, and ensure optimal performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+    <h1>Contact Us</h1>
+    <div class="contact-details">
+        <div class="contact-detail">
+            <a href="https://maps.app.goo.gl/y9jPL1u1ijksjbUn6">
+                <i class="bi bi-geo-alt"></i>
+                <h3>Address</h3>
+                <p>Mohalat Ziad, Samannoud, Al Gharbiyah</p>
+            </a>
+        </div>
+        <div class="contact-detail">
+            <a href="mailto:seebrahemsobhy@gmail.com">
+                <i class="bi bi-envelope"></i>
+                <h3>Email</h3>
+                <p>seebrahemsobhy@gmail.com</p>
+            </a>
+        </div>
+        <div class="contact-detail">
+            <a href="tel:+201128471221">
+                <i class="bi bi-telephone"></i>
+                <h3>Phone</h3>
+                <p>+201128471221</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <!-- قم بتحديث السطر التالي مع عنوان النموذج الخاص بك -->
+        <form action="https://formspree.io/f/xnnayory" method="POST">
+            <div class="form-row">
+                <input type="text" name="name" class="input-large" placeholder="Your Name" required>
+                <input type="email" name="email" class="input-large" placeholder="Your Email" required>
+            </div>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+    <footer>
+        Copy Right 2024 © By Ebrahem Sobhy All Rights Reserved
+    </footer>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7WSVR1G6ZK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7WSVR1G6ZK');
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+     <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+    // سكربت قائمة التنقل
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    });
+
+    // كود إظهار السهم عند النزول وإخفاؤه عند الصعود
+    window.onscroll = function() {
+        let backToTopButton = document.getElementById("backToTop");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // كود لإعادة المستخدم إلى أعلى الصفحة عند الضغط على السهم
+    document.getElementById("backToTop").onclick = function(e) {
+        e.preventDefault();
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+
+    // كود Typewriter
+    var typed = new Typed('.typing', {
+        strings: ['Ebrahem Sobhy', 'Developer', 'Designer', 'Freelancer'],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+    });
+
+    // دالة التعامل مع إرسال النموذج
+    function handleSubmit(event) {
+        event.preventDefault(); // منع إرسال النموذج بشكل افتراضي
+
+        // الحصول على النموذج
+        const form = document.getElementById('contact-form');
+
+        // الحصول على عناصر واجهة المستخدم
+        const submitButton = document.getElementById('submit-button');
+        const confirmationMessage = document.getElementById('confirmation-message');
+        const loadingSpinner = document.getElementById('loading-spinner');
+
+        // عرض تحميل أثناء الإرسال
+        submitButton.disabled = true; // تعطيل زر الإرسال لتجنب تعدد النقرات
+        loadingSpinner.style.display = 'block'; // عرض عنصر التحميل
+
+        // إرسال النموذج عبر Fetch API
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+        })
+        .then(response => {
+            if (response.ok) {
+                confirmationMessage.style.display = 'block'; // عرض رسالة التأكيد
+                form.reset(); // إعادة تعيين النموذج بعد الإرسال
+            } else {
+                throw new Error('حدث خطأ أثناء إرسال النموذج.');
+            }
+        })
+        .catch(error => {
+            alert(error.message); // عرض رسالة الخطأ للمستخدم
+        })
+        .finally(() => {
+            loadingSpinner.style.display = 'none'; // إخفاء عنصر التحميل
+            submitButton.disabled = false; // إعادة تفعيل زر الإرسال
+        });
+    }
+
+    // ربط دالة handleSubmit بنموذج الاتصال
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', handleSubmit);
+    }
+});
+
+    </script>
+</body>
+</html>
